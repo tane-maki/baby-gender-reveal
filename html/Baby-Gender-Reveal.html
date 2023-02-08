@@ -5,6 +5,7 @@
 <html>
 <head>
 	<title>Baby Gender Reveal</title>
+	<link rel="icon" href="https://www.i2me.net/wp/wp-content/uploads/fbrfg/favicon.ico">
 	<style>
 		html {
 			scroll-behavior: smooth;
@@ -71,8 +72,8 @@
 		document.getElementById("revealButton").addEventListener("click", e => {
 			e.target.style.display = "none";
 			window.scroll(0, window.innerHeight);
-			setTimeout(() => {
-				document.getElementById("music").play();
+			setTimeout(async () => {
+				await document.getElementById("music").play();
 				document.getElementById(GENDER).style.visibility = "visible";
 			}, 1000);
 		});
