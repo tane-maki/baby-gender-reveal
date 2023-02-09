@@ -23,7 +23,7 @@
 			background-color: #ffff66;
 			border: 2px solid lightyellow;
 			border-radius: 20px;
-			font-size: 16px;
+			font-size: 20px;
 			font-weight: bold;
 			box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 			cursor: pointer;
@@ -35,8 +35,9 @@
 		}
 		.images {
 			visibility: hidden;
-			animation: genderReveal 9.0s linear;
-			animation-delay: 1.5s;
+			animation: genderReveal 6.0s linear;
+			animation-delay: 3s;
+			animation-fill-mode: both;
 		}
 		#boy {
 			position: relative;
@@ -63,19 +64,21 @@
 		<img id="boy" class="images" src="https://img.freepik.com/free-vector/baby-boy-gender-reveal_53876-67632.jpg?w=740&t=st=1675764275~exp=1675764875~hmac=17a17b29799297bab4128fae8e41d50735f33b42542cda8810271dc10b2843ed" alt="Boy">
 		<img id="girl" class="images" src="https://img.freepik.com/free-vector/gender-reveal-of-a-girl_53876-67631.jpg?w=740&t=st=1675764268~exp=1675764868~hmac=c402a3cd5f8c2442b3bf021734c8d65456c3c2cd1c6efcf8adb1652b40fe1d06" alt="Girl">
 	</div>
-	<audio id="music" src="https://commons.nicovideo.jp/api/preview/get?cid=107303&content_type=mp3" onplay="this.volume=0.3;"></audio>
+	<audio id="music" src="https://commons.nicovideo.jp/api/preview/get?cid=107303&content_type=mp3" onplay="playMusic(this)"></audio>
 	<script>
 		// Change this value to reveal the baby's gender.
 		const GENDER = "boy";
 		// const GENDER = "girl";
 
-		document.getElementById("revealButton").addEventListener("click", e => {
+		function playMusic(self) {
+			self.volume = 0.3;
+			document.getElementById(GENDER).style.visibility = "visible";
+		}
+
+		document.getElementById("revealButton").addEventListener("click", async e => {
 			e.target.style.display = "none";
-			window.scroll(0, window.innerHeight);
-			setTimeout(async () => {
-				await document.getElementById("music").play();
-				document.getElementById(GENDER).style.visibility = "visible";
-			}, 1000);
+			scroll(0, innerHeight);
+			await document.getElementById("music").play();
 		});
 	</script>
 </body>
