@@ -8,8 +8,8 @@ BabyGenderReveal is a web page (using free materials) that can be easily gender-
 
 Show either of the links below to your family and friends.
 
-- [html/Baby-Gender-Reveal.html](https://tane-maki.github.io/BabyGenderReveal/html/Baby-Gender-Reveal.html) - For boys.
-- [html/Baby_Gender_Reveal.html](https://tane-maki.github.io/BabyGenderReveal/html/Baby_Gender_Reveal.html) - For girls.
+- [html/baby-gender-reveal.html](https://tane-maki.github.io/baby-gender-reveal/html/baby-gender-reveal.html) - For boys.
+- [html/baby_gender_reveal.html](https://tane-maki.github.io/baby-gender-reveal/html/baby_gender_reveal.html) - For girls.
 
 ## License
 
