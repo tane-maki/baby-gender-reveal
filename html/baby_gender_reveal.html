@@ -29,7 +29,6 @@
 		}
 		.images {
 			width: 700px;
-			margin: 5px;
 			visibility: hidden;
 			animation: genderReveal 6.0s linear;
 			animation-delay: 3s;
@@ -55,8 +54,9 @@
 			position: relative;
 		}
 		#girl {
-			position: absolute;
-			left: 150px;
+			position: relative;
+			z-index: -1;
+            top: -700px;
 		}
 		@keyframes genderReveal {
 			from {
@@ -85,7 +85,7 @@
 			<div style="margin: 10px;">
 				<a href="https://hb.afl.rakuten.co.jp/hgc/3130f12a.df88b30d.208c240a.2f4cd13f/?pc=http%3A%2F%2Fwww.rakuten.co.jp%2Fpearls-ar%2F&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMzQ0MzIwIiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hlb/3130f12a.df88b30d.208c240a.2f4cd13f/?sid=1&shop=pearls-ar&size=1&kind=2&me_id=1227765&me_adv_id=344320&t=logo" border="0" style="margin:2px" alt="" title=""></a>
 			</div>
-			<div>
+			<div style="margin: 5px;">
 				<img id="boy" class="images" src="https://img.freepik.com/free-vector/baby-boy-gender-reveal_53876-67632.jpg?w=740&t=st=1675764275~exp=1675764875~hmac=17a17b29799297bab4128fae8e41d50735f33b42542cda8810271dc10b2843ed" alt="Boy">
 				<img id="girl" class="images" src="https://img.freepik.com/free-vector/gender-reveal-of-a-girl_53876-67631.jpg?w=740&t=st=1675764268~exp=1675764868~hmac=c402a3cd5f8c2442b3bf021734c8d65456c3c2cd1c6efcf8adb1652b40fe1d06" alt="Girl">
 			</div>
