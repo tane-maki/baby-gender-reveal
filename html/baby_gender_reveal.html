@@ -11,12 +11,30 @@
 			scroll-behavior: smooth;
 		}
 		body {
+			display: flex;
+			flex-direction: row;
 			font-family: "Comic Sans MS";
 			text-align: center;
 			background-image: url("https://frame-illust.com/fi/wp-content/uploads/2015/01/88a809cd09d9b50634faa6445fccf03e.png");
 		}
-		img {
-			width: 50%;
+		.side {
+			flex: 0.1;
+			display: flex;
+			flex-direction: column;
+		}
+		.side img {
+			object-fit: cover;
+			width: 140px;
+  			height: 240px;
+		}
+		.images {
+			width: 700px;
+			margin: 5px;
+			visibility: hidden;
+			animation: genderReveal 6.0s linear;
+			animation-delay: 3s;
+			animation-fill-mode: both;
+			opacity: 0;
 		}
 		#revealButton {
 			padding: 10px 20px;
@@ -32,13 +50,6 @@
 			color: #333333;
 			background-color: #ffff80;
 			border: 2px solid white;
-		}
-		.images {
-			visibility: hidden;
-			animation: genderReveal 6.0s linear;
-			animation-delay: 3s;
-			animation-fill-mode: both;
-			opacity: 0;
 		}
 		#boy {
 			position: relative;
@@ -58,12 +69,35 @@
 	</style>
 </head>
 <body>
-	<img src="https://img.freepik.com/free-vector/flat-design-gender-reveal-concept-illustration_23-2149020606.jpg?w=740&t=st=1675760379~exp=1675760979~hmac=0b3254b63f5b891ee852cf69275bd8323c4e45f06dd2c66a8eaffc5e915212480" alt="Baby Gender Reveal">
-	<h1>Baby Gender Reveal</h1>
-	<button id="revealButton">Let's see!</button>
-	<div>
-		<img id="boy" class="images" src="https://img.freepik.com/free-vector/baby-boy-gender-reveal_53876-67632.jpg?w=740&t=st=1675764275~exp=1675764875~hmac=17a17b29799297bab4128fae8e41d50735f33b42542cda8810271dc10b2843ed" alt="Boy">
-		<img id="girl" class="images" src="https://img.freepik.com/free-vector/gender-reveal-of-a-girl_53876-67631.jpg?w=740&t=st=1675764268~exp=1675764868~hmac=c402a3cd5f8c2442b3bf021734c8d65456c3c2cd1c6efcf8adb1652b40fe1d06" alt="Girl">
+	<div class="side">
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314407.acffcf66.31314408.440bc111/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopkonoha%2F000024%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314407.acffcf66.31314408.440bc111/?me_id=1418270&item_id=10000029&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fselectshopkonoha%2Fcabinet%2F09650072%2F09650173%2Fimgrc0094592841.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31312ba3.83940dba.31312ba4.fcb4485e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fzonzontec%2Fmaternity-beruto%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31312ba3.83940dba.31312ba4.fcb4485e/?me_id=1320179&item_id=10001041&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fzonzontec%2Fcabinet%2Flady%2Fgadoru%2Fmaternity-top4.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314b39.e6663ea1.31314b3a.47207a8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flefutur%2Fllyb6795%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314b39.e6663ea1.31314b3a.47207a8a/?me_id=1310256&item_id=10073290&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flefutur%2Fcabinet%2Fllyt39%2Fllyb6795_x.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314b39.e6663ea1.31314b3a.47207a8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flefutur%2Fllyb8537%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314b39.e6663ea1.31314b3a.47207a8a/?me_id=1310256&item_id=10088565&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flefutur%2Fcabinet%2Fllyt50%2Fllyb8537_10.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/3131528e.13b8fa20.3131528f.c548af6e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjjbrother%2Fcagyg045%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/3131528e.13b8fa20.3131528f.c548af6e/?me_id=1395704&item_id=10014734&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fjjbrother%2Fcabinet%2Fcagy001%2Fcagyg045_x.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31315874.cdb17b02.31315875.3dc9c99d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnamekoubou-shin%2Fcompass1662615483%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31315874.cdb17b02.31315875.3dc9c99d/?me_id=1409684&item_id=10000026&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnamekoubou-shin%2Fcabinet%2Fcompass1662691938.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+	</div>
+	<div style="flex: 0.8; display: flex; flex-direction: column;">
+		<div>
+			<img src="https://img.freepik.com/free-vector/flat-design-gender-reveal-concept-illustration_23-2149020606.jpg?w=740&t=st=1675760379~exp=1675760979~hmac=0b3254b63f5b891ee852cf69275bd8323c4e45f06dd2c66a8eaffc5e915212480" alt="Baby Gender Reveal" style="width: 80%;">
+			<h1>Baby Gender Reveal</h1>
+			<button id="revealButton">Let's see!</button>
+			<div style="margin: 10px;">
+				<a href="https://hb.afl.rakuten.co.jp/hgc/3130f12a.df88b30d.208c240a.2f4cd13f/?pc=http%3A%2F%2Fwww.rakuten.co.jp%2Fpearls-ar%2F&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiIxIiwiYmFuIjoiMzQ0MzIwIiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hlb/3130f12a.df88b30d.208c240a.2f4cd13f/?sid=1&shop=pearls-ar&size=1&kind=2&me_id=1227765&me_adv_id=344320&t=logo" border="0" style="margin:2px" alt="" title=""></a>
+			</div>
+			<div>
+				<img id="boy" class="images" src="https://img.freepik.com/free-vector/baby-boy-gender-reveal_53876-67632.jpg?w=740&t=st=1675764275~exp=1675764875~hmac=17a17b29799297bab4128fae8e41d50735f33b42542cda8810271dc10b2843ed" alt="Boy">
+				<img id="girl" class="images" src="https://img.freepik.com/free-vector/gender-reveal-of-a-girl_53876-67631.jpg?w=740&t=st=1675764268~exp=1675764868~hmac=c402a3cd5f8c2442b3bf021734c8d65456c3c2cd1c6efcf8adb1652b40fe1d06" alt="Girl">
+			</div>
+		</div>
+	</div>
+	<div class="side">
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31312ccc.1d768896.31312ccd.a4db676e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmimosa-pharma%2F1031r1_m%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31312ccc.1d768896.31312ccd.a4db676e/?me_id=1406634&item_id=10000021&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmimosa-pharma%2Fcabinet%2Fitem%2F1031%2Fwhite%2F1.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314407.acffcf66.31314408.440bc111/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fselectshopkonoha%2F000015%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314407.acffcf66.31314408.440bc111/?me_id=1418270&item_id=10000017&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fselectshopkonoha%2Fcabinet%2F09544155%2F09593312%2Fimgrc0094332969.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314b39.e6663ea1.31314b3a.47207a8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flefutur%2Flbjb11478%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314b39.e6663ea1.31314b3a.47207a8a/?me_id=1310256&item_id=10116665&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flefutur%2Fcabinet%2Fbjt026%2Flbjb11478_x.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314fed.6f25bddf.31314fee.a086f897/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyokadoh-shop%2Fc055%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314fed.6f25bddf.31314fee.a086f897/?me_id=1395228&item_id=10000027&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fyokadoh-shop%2Fcabinet%2Fc055%2Fc055_8.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31314b39.e6663ea1.31314b3a.47207a8a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flefutur%2Flow989%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31314b39.e6663ea1.31314b3a.47207a8a/?me_id=1310256&item_id=10028858&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flefutur%2Fcabinet%2Fllyt19%2Flow989_x.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
+		<a href="https://hb.afl.rakuten.co.jp/ichiba/31315874.cdb17b02.31315875.3dc9c99d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnamekoubou-shin%2Fangel%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"  ><img src="https://hbb.afl.rakuten.co.jp/hgb/31315874.cdb17b02.31315875.3dc9c99d/?me_id=1409684&item_id=10000069&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnamekoubou-shin%2Fcabinet%2Fcompass1678106623.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>
 	</div>
 	<audio id="music" src="https://commons.nicovideo.jp/api/preview/get?cid=107303&content_type=mp3" onplay="playMusic(this)"></audio>
 	<script>
