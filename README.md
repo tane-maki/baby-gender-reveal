@@ -14,7 +14,3 @@ Show either of the links below to your family and friends.
 ## License
 
 MIT License
-
-## Note
-
-This site contains Rakuten Affiliate links.
