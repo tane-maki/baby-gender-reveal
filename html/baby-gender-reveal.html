@@ -119,16 +119,13 @@
 		document.getElementById("revealButton").addEventListener("click", async e => {
 			e.target.style.display = "none";
 			scroll(0, innerHeight);
-			button.addEventListener("click", () => {
+			setTimeout(() => {
 				bgm.play();
-
-				setTimeout(() => {
-					startAnimation();
-				}, 500);
-			});
+			}, 500);
 		});
 	</script>
 </body>
 </html>
+
 
 
